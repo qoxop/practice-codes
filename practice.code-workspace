@@ -1,0 +1,14 @@
+{
+	"folders": [{
+		"path": "."
+	}],
+	"settings": {
+		"saveAndRun": {
+			"commands": [{
+					"match": ".*",
+					"cmd": "git add . && git commit -m '自动提交'"
+				},
+			]
+		}
+	}
+}
