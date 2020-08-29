@@ -23,7 +23,7 @@ export default function trialDivision(num: number): boolean {
     //     if (num % d === 0) return false;
     // }
     if (num === 2 || num === 3 || num === 5) return true;
-    if (num % 1 !== 0 || num % 2 === 0 || num % 3 === 0 || num % 5 === 0) return false;
+    if (num % 1 !== 0 || num % 2 === 0 || num % 3 === 0 || num % 5 === 0 || num <= 1) return false;
     if (Math.sqrt(num) % 1 === 0) return false;
     return true;
 }
