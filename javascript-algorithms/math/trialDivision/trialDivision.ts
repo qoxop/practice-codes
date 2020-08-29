@@ -4,7 +4,7 @@
  * 素数筛
  * @param num 
  */
-function trialDivision(num: number): boolean {
+export default function trialDivision(num: number): boolean {
     // 特殊数字
     if (num === 2 || num === 3) return true;
 
