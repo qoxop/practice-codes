@@ -3,7 +3,7 @@
  * 素数筛
  * @param max 
  */
-function sieveOfEratosthenes(max: number): number[] {
+export default function sieveOfEratosthenes(max: number): number[] {
     const bArr = [];
     const dive = Math.sqrt(max);
 
