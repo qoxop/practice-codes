@@ -6,7 +6,7 @@
  */
 function trialDivision(num: number): boolean {
     // 特殊数字
-    if (num === 1 || num === 2 || num === 3) return true;
+    if (num === 2 || num === 3) return true;
 
     // 排除非整数、偶数 
     if (num % 1 !== 0 || num % 2 === 0) return false;
