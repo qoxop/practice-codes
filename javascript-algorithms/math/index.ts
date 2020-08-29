@@ -6,5 +6,5 @@ console.log(arr[arr.length - 1])
 if (arr.every(item => trialDivision(item))) {
     console.log('success')
 } else {
-    console.log('fail') 
+    console.log('fail')
 }

@@ -27,4 +27,4 @@ export default function sieveOfEratosthenes(max: number): number[] {
         }
     }
     return res;
-} 
+}

@@ -22,5 +22,6 @@ export default function trialDivision(num: number): boolean {
     for(let d = 3; d <= dive; d += 2) {
         if (num % d === 0) return false;
     }
+    
     return true;
 }
