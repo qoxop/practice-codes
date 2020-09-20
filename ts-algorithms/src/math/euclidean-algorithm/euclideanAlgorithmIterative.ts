@@ -2,7 +2,7 @@
  * 欧几里得算法，求最大公约数
  * 迭代版
  */
-function euclideanAlgorithmIterative(A, B) {
+function euclideanAlgorithmIterative(A: number, B: number): number {
     A = Math.abs(A);
     B = Math.abs(B);
     let b = A % B;
