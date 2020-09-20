@@ -1,12 +1,12 @@
 /*
- * @Author: your name
+ * @Author: 张集伟
  * @Date: 2020-09-09 13:07:37
  * @LastEditTime: 2020-09-09 14:04:18
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
+ * @LastEditors: 张集伟
+ * @Description: 整数分解算法
  * @FilePath: \practice-codes\javascript-algorithms\math\integerPartition.ts
  */
-export default function integerPartition(number) {
+export default function integerPartition(number: number): number {
     const partitionMatrix = Array(number + 1).fill(null).map(() => {
       return Array(number + 1).fill(null);
     });
