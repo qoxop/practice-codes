@@ -1,5 +1,5 @@
 interface Comparable<Key> {
-    compareTo(k: Key): number
+    compareTo(k: Key): -1 | 0 | 1
 }
 
 interface ST<Key extends Comparable<Key>, Value> {
