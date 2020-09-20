@@ -23,6 +23,19 @@ class RedBlackBST<Key extends Comparable<Key>, Value> implements ST<Key, Value> 
             return new Node(key, value, Node.RED);
         }
         const cmp = key.compareTo(node.key);
+        switch(cmp) {
+            case 1: 
+                node.right = this._put(node.right, key, value);
+                break;
+            case -1:
+                node.left = this._put(node.left, key, value);
+                break;
+            case 0:
+                node.value = value;
+                break;
+            default:
+                throw "key 类型未继承 Comparable Api"
+        }
         
         
         return node
