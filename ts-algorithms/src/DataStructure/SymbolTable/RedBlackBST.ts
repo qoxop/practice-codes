@@ -22,6 +22,8 @@ class RedBlackBST<Key extends Comparable<Key>, Value> implements ST<Key, Value> 
         if (node === null) {
             return new Node(key, value, Node.RED);
         }
+        const cmp = key.compareTo(node.key);
+        
         
         return node
     }
