@@ -8,7 +8,7 @@ interface ST<Key extends Comparable<Key>, Value> {
     delete(key: Key): void;
     contains(key: Key): boolean;
     isEmpty(): boolean;
-    size(): number;
+    size(node?: any): number;
     min(): Key;
     max(): Key;
     floor(key: Key): Key; // 小于等于key的最大键
