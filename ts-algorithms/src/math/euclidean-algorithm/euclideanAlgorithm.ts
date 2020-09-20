@@ -2,7 +2,7 @@
  * 欧几里得算法，求最大公约数
  * 递归版
  */
-function euclideanAlgorithm(A, B) {
+export default function euclideanAlgorithm(A: number, B: number): number {
     A = Math.abs(A);
     B = Math.abs(B);
     const b = A % B;
