@@ -1,8 +1,8 @@
-interface Comparable {
-
+interface Comparable<Key> {
+    compareTo(k: Key): number
 }
 
-interface ST<Key extends Comparable, Value> {
+interface ST<Key extends Comparable<Key>, Value> {
     put(key: Key, value: Value): void;
     get(key: Key): Value;
     delete(key: Key): void;
