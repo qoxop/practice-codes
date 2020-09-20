@@ -1,7 +1,7 @@
 /**
  * 红黑树符号表的ts实现
  */
-class Node<Key extends Comparable, Value> {
+class Node<Key extends Comparable<Key>, Value> {
     static BLACK = false;
     static RED = false;
     key: Key;
@@ -18,6 +18,16 @@ class Node<Key extends Comparable, Value> {
 }
 class RedBlackBST<Key extends Comparable<Key>, Value> implements ST<Key, Value> {
     private root: Node<Key, Value> = null;
+    private _rotateLeft(node: Node<Key, Value>): Node<Key, Value> {
+        const rc = node.right;
+        node.right = rc.left;
+        rc.left = node;
+        rc.color = node.color;
+        node.color = Node.RED;
+        rc.size = node.size;
+        node.size = 1 + this.size(node.left) + this.size(node.right)
+        return rc;
+    }
     private _put(node:  Node<Key, Value>, key: Key, value: Value): Node<Key, Value> {
         if (node === null) {
             return new Node(key, value, Node.RED);
@@ -36,9 +46,12 @@ class RedBlackBST<Key extends Comparable<Key>, Value> implements ST<Key, Value> 
             default:
                 throw "key 类型未继承 Comparable Api"
         }
-        
+
         
         return node
+    }
+    size(node: Node<Key, Value>): number {
+        return 1;
     }
     put(key: Key, value: Value) {
         this.root = this._put(this.root, key, value);
