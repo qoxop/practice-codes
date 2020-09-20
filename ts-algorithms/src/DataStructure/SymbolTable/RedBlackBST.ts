@@ -16,9 +16,17 @@ class Node<Key extends Comparable, Value> {
         this.color = color;
     }
 }
-class RedBlackBST<Key extends Comparable, Value> implements ST<Key, Value> {
-    private Node = {}
+class RedBlackBST<Key extends Comparable<Key>, Value> implements ST<Key, Value> {
+    private root: Node<Key, Value> = null;
+    private _put(node:  Node<Key, Value>, key: Key, value: Value): Node<Key, Value> {
+        if (node === null) {
+            return new Node(key, value, Node.RED);
+        }
+        
+        return node
+    }
     put(key: Key, value: Value) {
-
+        this.root = this._put(this.root, key, value);
+        this.root.color = Node.BLACK;
     }
 }
