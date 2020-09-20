@@ -1,9 +1,6 @@
 interface Comparable {
 
 }
-// interface Iterable<T> {
-
-// }
 
 interface ST<Key extends Comparable, Value> {
     put(key: Key, value: Value): void;
