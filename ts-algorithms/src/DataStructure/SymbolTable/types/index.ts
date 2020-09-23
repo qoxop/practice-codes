@@ -1,3 +1,11 @@
+/*
+ * @Author: 张集伟
+ * @Date: 2020-09-21 19:27:27
+ * @LastEditTime: 2020-09-21 19:30:40
+ * @LastEditors: 张集伟
+ * @Description: 
+ * @FilePath: \practice-codes\ts-algorithms\src\DataStructure\SymbolTable\types\index.ts
+ */
 interface Comparable<Key> {
     compareTo(k: Key): -1 | 0 | 1
 }
